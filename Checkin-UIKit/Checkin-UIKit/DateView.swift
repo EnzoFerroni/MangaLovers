@@ -20,7 +20,6 @@ class DateView: UIView {
         numberLabel.textColor = UIColor(named: "RedManga")
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
         numberLabel.keyboardType = .numberPad
-        numberLabel.borderStyle = .line
         return numberLabel
     }()
     
@@ -32,6 +31,16 @@ class DateView: UIView {
         textLabel.textColor = UIColor(named: "RedManga")
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         return textLabel
+    }()
+    
+    let bgImageView: UIImageView = {
+        let bgImageView = UIImageView()
+        bgImageView.contentMode = .scaleAspectFill
+        bgImageView.clipsToBounds = true
+        bgImageView.translatesAutoresizingMaskIntoConstraints = false
+        bgImageView.image = UIImage(named: "bgImage")
+        
+        return bgImageView
     }()
         
     override init(frame: CGRect) {
@@ -46,30 +55,40 @@ class DateView: UIView {
                 
         addSubview(numberLabel)
         addSubview(textLabel)
+        addSubview(bgImageView)
+        sendSubviewToBack(bgImageView)
         
     }
-    
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.layer.borderColor = UIColor.blue.cgColor
+        self.clipsToBounds = true
+        self.layer.borderColor = UIColor.redManga.cgColor
         self.layer.borderWidth = 5
-        
+        self.layer.cornerRadius = 61
+                
     }
     
     func setupConstraints() {
-        backgroundColor = .red
-        
+                
         NSLayoutConstraint.activate([
             
-            numberLabel.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+            numberLabel.topAnchor.constraint(equalTo: topAnchor, constant: -20),
             numberLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14),
             numberLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             numberLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-
-            textLabel.topAnchor.constraint(equalTo: numberLabel.bottomAnchor, constant: -20),
-            textLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+            
+            textLabel.topAnchor.constraint(equalTo: numberLabel.topAnchor, constant: 85),
+            textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
+            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 53),
+            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -53),
+            
+            bgImageView.topAnchor.constraint(equalTo: topAnchor),
+            bgImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bgImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            bgImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14),
+            
         ])
     }
     required init?(coder: NSCoder) {
