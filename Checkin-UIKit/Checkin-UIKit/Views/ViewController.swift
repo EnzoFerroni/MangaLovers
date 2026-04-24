@@ -120,7 +120,7 @@ class ViewController: UIViewController {
         cpfComplement.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-//            
+//
             labelCPF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 118),
             labelCPF.topAnchor.constraint(equalTo: perfilLabel.bottomAnchor, constant: 33),
                    
@@ -226,4 +226,3 @@ class ViewController: UIViewController {
     let vc = ViewController()
     vc
 }
-

@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 
 class DateView: UIView {
+    
+    
+    
     let numberLabel: UITextField = {
         let numberLabel = UITextField()
         numberLabel.textAlignment = .center
         numberLabel.font = UIFont.systemFont(ofSize: 58, weight: .bold, width: .compressed)
-        numberLabel.text = "TEXT"
         numberLabel.textColor = UIColor(named: "RedManga")
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
         numberLabel.keyboardType = .numberPad
@@ -43,6 +45,8 @@ class DateView: UIView {
         super.init(frame: frame)
         
         setup(numberString: numberString, textString: textString)
+        setupConstraints()
+        
     }
     
     func setup(numberString: String, textString: String) {
@@ -93,4 +97,6 @@ class DateView: UIView {
     
 }
 
-
+//#Preview {
+//    DateView()
+//}

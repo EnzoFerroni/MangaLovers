@@ -14,6 +14,7 @@
 		802470852F9A86ED00249189 /* Exceptions for "Checkin-UIKit" folder in "Checkin-UIKit" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Draw-Close.otf",
 				Info.plist,
 			);
 			target = 802470722F9A86EC00249189 /* Checkin-UIKit */;
