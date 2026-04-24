@@ -10,9 +10,10 @@ import UIKit
 class LabelComponent: UIView{
     
     
-    override init(frame: CGRect){
+    init(frame: CGRect, text: String){
         super.init(frame: frame)
-        setupLabel(label: "Text")
+        setupLabel(label: text)
+    
     }
     
     required init?(coder: NSCoder) {
@@ -23,16 +24,16 @@ class LabelComponent: UIView{
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 61
-        view.layer.borderColor = UIColor.redLabel.cgColor
+        view.layer.borderColor = UIColor.redManga.cgColor
         view.layer.borderWidth = 3
         view.clipsToBounds = true
         
-
+//
         let imageView = UIImageView(image: UIImage(named: "backgroundLabel"))
         imageView.contentMode = .scaleAspectFill
       
         view.addSubview(imageView)
-        
+//        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -46,12 +47,13 @@ class LabelComponent: UIView{
         return view
     }()
 
+    //[(text)]
     
     
     let textLabel: UILabel = {
+
         let label = UILabel()
-        label.textColor = .redLabel
-//        label.font = UIFont(name: "draw-close", size: 58)
+        label.textColor = .redManga
         label.font = UIFont.boldSystemFont(ofSize: 58)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -59,19 +61,24 @@ class LabelComponent: UIView{
     }()
     
     
-    
+ 
     func setupLabel(label: String){
-        
         addSubview(square)
         square.addSubview(textLabel)
         textLabel.text = label
         
         NSLayoutConstraint.activate([
-            square.centerXAnchor.constraint(equalTo: centerXAnchor),
-            square.centerYAnchor.constraint(equalTo: centerYAnchor),
-            square.heightAnchor.constraint(equalToConstant: 130),
-            square.widthAnchor.constraint(equalToConstant: 450),
+//            square.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            square.centerYAnchor.constraint(equalTo: centerYAnchor),
+//            square.heightAnchor.constraint(equalToConstant: 130),
+//            square.widthAnchor.constraint(equalToConstant: 486),
             
+//            
+            square.topAnchor.constraint(equalTo: topAnchor),
+            square.bottomAnchor.constraint(equalTo: bottomAnchor),
+            square.leadingAnchor.constraint(equalTo: leadingAnchor),
+            square.trailingAnchor.constraint(equalTo: trailingAnchor),
+
             
             textLabel.centerXAnchor.constraint(equalTo: square.centerXAnchor),
             textLabel.centerYAnchor.constraint(equalTo: square.centerYAnchor),
@@ -84,7 +91,7 @@ class LabelComponent: UIView{
 
 
 #Preview{
-    let vc = LabelComponent()
+    let vc = LabelComponent(frame: .zero, text: "")
     vc
 }
 
