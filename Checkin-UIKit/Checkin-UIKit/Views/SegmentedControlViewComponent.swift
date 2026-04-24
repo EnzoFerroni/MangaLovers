@@ -16,12 +16,22 @@ class SegmentedControlViewComponent: UIViewController{
     override func viewDidLoad() {
         testView.setUpValues("Imposto", "1970.00")
         testView.translatesAutoresizingMaskIntoConstraints = false
+        
+        configureSegmentedControl()
+        setUp()
+        setUpConstraints()
     }
     
-//    func configureSegmentedControl
+    func configureSegmentedControl() {
+        selector.selectedSegmentIndex = 0
+        selector.translatesAutoresizingMaskIntoConstraints = false
+        selector.selectedSegmentTintColor = UIColor(named: "OffWhiteColor") ?? .systemBackground
+        selector.backgroundColor = .clear
+    }
     
     func setUp(){
         view.addSubview(testView)
+        view.addSubview(selector)
     }
     
     func setUpConstraints(){
@@ -31,6 +41,10 @@ class SegmentedControlViewComponent: UIViewController{
             testView.bottomAnchor.constraint(equalTo: view.bottomAnchor) ,
             testView.leadingAnchor.constraint(equalTo: view.leadingAnchor) ,
             testView.trailingAnchor.constraint(equalTo: view.trailingAnchor) ,
+            
+            selector.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
+            selector.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            selector.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
         ])
     }
 }
