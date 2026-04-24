@@ -12,14 +12,14 @@ struct Fonts{
 }
 class RestitutionComponentView: UIView {
 
-    let restitutionText: UILabel = {
-        let numberLabel = UILabel()
-        numberLabel.textAlignment = .center
-        numberLabel.font = UIFont(name: "DrawClose", size: 30)
-        numberLabel.text = "Restituição"
-        numberLabel.textColor = .label
-        numberLabel.translatesAutoresizingMaskIntoConstraints = false
-        return numberLabel
+    let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont(name: "DrawClose", size: 30)
+        titleLabel.text = "Restituição"
+        titleLabel.textColor = .label
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        return titleLabel
     }()
     
     
@@ -37,7 +37,6 @@ class RestitutionComponentView: UIView {
         let moneyText = UILabel()
         moneyText.textAlignment = .left
         moneyText.font = UIFont.systemFont(ofSize: 58, weight: .bold , width: .compressed)
-        moneyText.text = "1980,00"
         moneyText.textColor = .label
         moneyText.translatesAutoresizingMaskIntoConstraints = false
         return moneyText
@@ -54,28 +53,32 @@ class RestitutionComponentView: UIView {
     }
     
     func setUp(){
-        addSubview(restitutionText)
+        addSubview(titleLabel)
         addSubview(r$)
         addSubview(moneyText)
+        
     }
+    
+    func setUpValues (_ moneyTxt: String , _ value: String){
+       titleLabel.text = moneyTxt
+       moneyText.text = value
+   }
     
     func setUpConstrainrs(){
         
         NSLayoutConstraint.activate([
             
-            restitutionText.centerXAnchor.constraint(equalTo: centerXAnchor),
-            restitutionText.centerYAnchor.constraint(equalTo: centerYAnchor) ,
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor) ,
             
-            r$.topAnchor.constraint(equalTo: restitutionText.bottomAnchor , constant: 16) ,
+            r$.topAnchor.constraint(equalTo: titleLabel.bottomAnchor , constant: 16) ,
             r$.bottomAnchor.constraint(equalTo: bottomAnchor , constant: 8) ,
-            r$.leadingAnchor.constraint(equalTo: restitutionText.leadingAnchor) ,
-//            r$.trailingAnchor.constraint(equalTo: trailingAnchor , constant: -16) ,
+            r$.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor) ,
             
-            moneyText.topAnchor.constraint(equalTo: restitutionText.bottomAnchor , constant: 16) ,
+            moneyText.topAnchor.constraint(equalTo: titleLabel.bottomAnchor , constant: 16) ,
             moneyText.bottomAnchor.constraint(equalTo: bottomAnchor , constant: 8) ,
             moneyText.leadingAnchor.constraint(equalTo: r$.trailingAnchor , constant: 16) ,
-            moneyText.trailingAnchor.constraint(equalTo: trailingAnchor , constant: -16) ,
-
+            moneyText.trailingAnchor.constraint(equalTo: trailingAnchor) ,
         ])
         
     }
@@ -84,5 +87,6 @@ class RestitutionComponentView: UIView {
 
 #Preview(){
     let uv = RestitutionComponentView()
+    uv.setUpValues("Restituição", "1.980,00")
     return uv
 }
