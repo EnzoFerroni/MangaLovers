@@ -10,8 +10,6 @@ import UIKit
 
 class DateView: UIView {
     
-    
-    
     let numberLabel: UITextField = {
         let numberLabel = UITextField()
         numberLabel.textAlignment = .center
