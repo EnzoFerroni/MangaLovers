@@ -11,7 +11,7 @@ struct Fonts{
     static let DrawClose = "DrawClose"
 }
 class RestitutionComponentView: UIView {
-
+    
     let titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.textAlignment = .center
@@ -60,14 +60,13 @@ class RestitutionComponentView: UIView {
     }
     
     func setUpValues (_ moneyTxt: String , _ value: String){
-       titleLabel.text = moneyTxt
-       moneyText.text = value
-   }
+        titleLabel.text = moneyTxt
+        moneyText.text = value
+    }
     
     func setUpConstrainrs(){
-        
         NSLayoutConstraint.activate([
-            
+
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor) ,
             

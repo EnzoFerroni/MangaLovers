@@ -79,9 +79,7 @@ class ViewController: UIViewController {
     let streetSquare = LabelComponent(frame: .zero, text: "R dos pinheiros")
     let numberSquare = DateView(frame: .zero, numberString: "04", textString: "Nº")
     
-    
-    
-
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
