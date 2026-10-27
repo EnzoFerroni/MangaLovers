@@ -94,6 +94,14 @@ Checkin-UIKit/Checkin-UIKit/
         <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
       </td>
     </tr>
+    <tr>
+      <td align="center" width="25%">
+        <a href="https://github.com/matheusmotta16"><img src="https://github.com/matheusmotta16.png" width="90" alt="Matheus Motta"/></a>
+        <br/><sub><b>Matheus Motta</b></sub><br/><br/>
+        <a href="https://github.com/matheusmotta16"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+        <a href="https://www.linkedin.com/in/matheus-motta-5a8539349/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
+      </td>
+    </tr>
   </table>
 </div>
 
