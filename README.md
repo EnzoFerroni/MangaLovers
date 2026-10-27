@@ -66,12 +66,36 @@ Checkin-UIKit/Checkin-UIKit/
 
 ## Team
 
-| Name | GitHub |
-| --- | --- |
-| Enzo Ferroni | [@EnzoFerroni](https://github.com/EnzoFerroni) |
-| João Pedro Pioltini | [@JoaoPioltini](https://github.com/JoaoPioltini) |
-| Leonardo Cruz | [@LeonardoCruz7](https://github.com/LeonardoCruz7) |
-| Lucca Pivoto | [@LuccaPV](https://github.com/LuccaPV) |
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="25%">
+        <a href="https://github.com/EnzoFerroni"><img src="https://github.com/EnzoFerroni.png" width="90" alt="Enzo Ferroni"/></a>
+        <br/><sub><b>Enzo Ferroni</b></sub><br/><br/>
+        <a href="https://github.com/EnzoFerroni"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+        <a href="https://www.linkedin.com/in/enzoferroni/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://github.com/JoaoPioltini"><img src="https://github.com/JoaoPioltini.png" width="90" alt="João Pioltini"/></a>
+        <br/><sub><b>João Pioltini</b></sub><br/><br/>
+        <a href="https://github.com/JoaoPioltini"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+        <a href="https://www.linkedin.com/in/joaopioltini/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://github.com/LeonardoCruz7"><img src="https://github.com/LeonardoCruz7.png" width="90" alt="Leonardo Cruz"/></a>
+        <br/><sub><b>Leonardo Cruz</b></sub><br/><br/>
+        <a href="https://github.com/LeonardoCruz7"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+        <a href="https://www.linkedin.com/in/leonardo-cruz-626b82211/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://github.com/LuccaPV"><img src="https://github.com/LuccaPV.png" width="90" alt="Lucca Pivoto"/></a>
+        <br/><sub><b>Lucca Pivoto</b></sub><br/><br/>
+        <a href="https://github.com/LuccaPV"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"/></a>
+        <a href="https://www.linkedin.com/in/luccapivoto/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"/></a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## License
 
